@@ -1,0 +1,10 @@
+09:59:03 **** Incremental Build of configuration Debug for project M07A03_InternalClock ****
+make -j8 all 
+arm-none-eabi-size   M07A03_InternalClock.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6320	     20	   1572	   7912	   1ee8	M07A03_InternalClock.elf
+Finished building: default.size.stdout
+ 
+
+09:59:04 Build Finished. 0 errors, 0 warnings. (took 600ms)
+

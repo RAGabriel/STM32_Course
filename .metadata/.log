@@ -13,3 +13,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-02-01 09:39:40.529
 !MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-02-01 09:50:06.289
+!MESSAGE Indexed 'M07A03_InternalClock' (23 sources, 82 headers) in 7.18 sec: 5,430 declarations; 30,896 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0055%)
