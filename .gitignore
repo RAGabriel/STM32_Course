@@ -56,3 +56,4 @@ dkms.conf
 *.resources
 *.xmi
 *.xml
+.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
