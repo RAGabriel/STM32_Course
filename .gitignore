@@ -50,10 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-*.ini
-*.log
-*.index
-*.resources
-*.xmi
-*.xml
-.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+
+# STM32CubeIDE
+.metadata/
