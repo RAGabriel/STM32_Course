@@ -8,7 +8,7 @@ Exercises list
 - M08A02: Blink LED
   - Configured PB3(Built-in LED) pin as output and toggle your state every half second.
 - M08A03: Push Button
-  - Configured PA12 pin as input with pull-up, when pressed toggle the LED state of PB3(Built-in LED).
-  - Configured PB0 pin as input with pull-up, when pressed toggle the LED state of PB3(Built-in LED) 10 times with a delay of half second.
+  - Configured PA12 pin as input with pull-up, when pressed toggle the state of PB3(Built-in LED).
+  - Configured PB0 pin as input with pull-up, when pressed toggle the state of PB3(Built-in LED) 10 times with a delay of half second.
 - M08A05: GPIO Interrupt 
-  - Configured PA12 as a external interrupt, when pressed toggle the LED state of PB3(Built-in LED).
+  - Configured PA12 as a external interrupt, when pressed toggle the state of PB3(Built-in LED).
