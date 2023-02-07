@@ -12,3 +12,5 @@ Exercises list
   - Configured PB0 pin as input with pull-up, when pressed toggle the state of PB3(Built-in LED) 10 times with a delay of half second.
 - M08A05: GPIO Interrupt 
   - Configured PA12 as a external interrupt, when pressed toggle the state of PB3(Built-in LED).
+- M09A01: General Purpose Timer
+  - Configured TIMER15 in counter mode UP, counting to 2000 in 2 seconds.
