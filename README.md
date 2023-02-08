@@ -14,3 +14,5 @@ Exercises list
   - Configured PA12 as a external interrupt, when pressed toggle the state of PB3(Built-in LED).
 - M09A01: General Purpose Timer
   - Configured TIMER15 in counter mode UP, counting to 2000 in 2 seconds.
+- M09A02: Timer Blink LED
+  - Configured TIMER6 (basic timer) in counter mode UP, counting to 250 in 0.25 seconds and toggle the state of PB3(Built-in LED).
