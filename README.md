@@ -18,3 +18,5 @@ Exercises list
   - Configured TIMER6 (basic timer) in counter mode UP, counting to 250 in 0.25 seconds and toggle the state of PB3(Built-in LED).
 - M09A03: Delay Function with Timer
   - Configured TIMER16 (general purpose) in counter mode UP with a refresh rate of 1 milisecond. In ***main*** was created a private function to make a delay in miliseconds.
+- M09A04: Timer Interrupt
+  - Configured TIMER7 (basic timer) in counter mode UP with a refresh rate of 1 milisecond. When timer overflow toggle the state of PB3(Built-in LED).
