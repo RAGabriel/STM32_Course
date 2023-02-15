@@ -20,3 +20,5 @@ Exercises list
   - Configured TIMER16 (general purpose) in counter mode UP with a refresh rate of 1 milisecond. In ***main*** was created a private function to make a delay in miliseconds.
 - M09A04: Timer Interrupt
   - Configured TIMER7 (basic timer) in counter mode UP with a refresh rate of 1 milisecond. When timer overflow toggle the state of PB3(Built-in LED).
+- M10A02: Output Compare
+  - Configured TIMER15 (general purpose) in output compare mode setting channel 1 (PA2) and channel 2 (PA3) as output pins and toggling the states with a phase shift of 180 degrees.
