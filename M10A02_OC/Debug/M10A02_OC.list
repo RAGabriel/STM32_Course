@@ -684,8 +684,8 @@ void MX_TIM15_Init(void)
     Error_Handler();
  8000474:	f7ff ff1d 	bl	80002b2 <Error_Handler>
   }
-  sConfigOC.Pulse = 1000;
- 8000478:	f44f 737a 	mov.w	r3, #1000	; 0x3e8
+  sConfigOC.Pulse = 500;
+ 8000478:	f44f 73fa 	mov.w	r3, #500	; 0x1f4
  800047c:	637b      	str	r3, [r7, #52]	; 0x34
   if (HAL_TIM_OC_ConfigChannel(&htim15, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
  800047e:	f107 0330 	add.w	r3, r7, #48	; 0x30
