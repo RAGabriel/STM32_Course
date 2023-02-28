@@ -22,3 +22,5 @@ Exercises list
   - Configured TIMER7 (basic timer) in counter mode UP with a refresh rate of 1 milisecond. When timer overflow toggle the state of PB3(Built-in LED).
 - M10A02: Output Compare
   - Configured TIMER15 (general purpose) in output compare mode setting channel 1 (PA2) and channel 2 (PA3) as output pins and toggling the states with a phase shift of 180 degrees.
+- M10A03: Input Capture
+  - Configured TIMER2 (general purpose) in input capture mode setting the channel 1 (PA0) as input pin and rising mode. Getting two values from Counter Period register and subtracting, after this dividing 2,000,000 (counting frequency) by the result of subtraction to find the frequency of input signal.
