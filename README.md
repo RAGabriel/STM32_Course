@@ -24,3 +24,5 @@ Exercises list
   - Configured TIMER15 (general purpose) in output compare mode setting channel 1 (PA2) and channel 2 (PA3) as output pins and toggling the states with a phase shift of 180 degrees.
 - M10A03: Input Capture
   - Configured TIMER2 (general purpose) in input capture mode setting the channel 1 (PA0) as input pin and rising mode. Getting two values from Counter Period register and subtracting, after this dividing 2,000,000 (counting frequency) by the result of subtraction to find the frequency of input signal.
+- M10A04: PWM
+  - Configured TIMER2 (general purpose) and TIMER15(general purpose) in PWM Generation mode. Created two PWM signals with variable duty cicle.
