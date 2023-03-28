@@ -26,3 +26,5 @@ Exercises list
   - Configured TIMER2 (general purpose) in input capture mode setting the channel 1 (PA0) as input pin and rising mode. Getting two values from Counter Period register and subtracting, after this dividing 2,000,000 (counting frequency) by the result of subtraction to find the frequency of input signal.
 - M10A04: PWM
   - Configured TIMER2 (general purpose) and TIMER15(general purpose) in PWM Generation mode. Created two PWM signals with variable duty cicle.
+- M10A05: PWM with Deadtime
+  - Configured TIMER1 (advanced-control timer) in PWM with deadtime mode. Created two PWM signals with a phase shift of 180 degrees and 25us of deadtime.
