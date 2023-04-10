@@ -30,3 +30,5 @@ Exercises list
   - Configured TIMER1 (advanced-control timer) in PWM with deadtime mode. Created two PWM signals with a phase shift of 180 degrees and 25us of deadtime.
 - M11A02: ADC Polling
   - Configured ADC1 with 12 bits resolution and polling the samples with 100 miliseconds of sample time.
+- M11A04: Multi Channel ADC Polling
+  - Configured ADC1 channel 5 and 6 with 12 bits resolution and polling the samples with 100 miliseconds of sample time.
