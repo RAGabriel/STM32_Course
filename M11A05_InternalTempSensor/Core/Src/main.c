@@ -32,12 +32,12 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define TS_CAL1 (uint16_t*) ((uint32_t)0x1FFF75A8) // TS_CAL1 is the temperature sensor calibration value acquired at TS_CAL1_TEMP
-#define TS_CAL2 (uint16_t*) ((uint32_t)0x1FFF75CA) // TS_CAL2 is the temperature sensor calibration value acquired at TS_CAL2_TEMP
-#define TS_CAL1_TEMP 30 // Calibration temperature 1
-#define TS_CAL2_TEMP 130 // Calibration temperature 2
-#define REFERENCE_VOLTAGE 3.3 // Reference voltage (V)
-#define CALIBRATION_REFERENCE_VOLTAGE 3 // Reference voltage during calibration (V)
+#define TS_CAL1 *TEMPSENSOR_CAL1_ADDR
+#define TS_CAL2 *TEMPSENSOR_CAL2_ADDR
+#define TS_CAL1_TEMP TEMPSENSOR_CAL1_TEMP
+#define TS_CAL2_TEMP TEMPSENSOR_CAL2_TEMP
+#define REFERENCE_VOLTAGE 3300 // Reference voltage (V)
+#define CALIBRATION_REFERENCE_VOLTAGE TEMPSENSOR_CAL_VREFANALOG
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,7 +51,8 @@
 uint32_t raw_data;
 float temperature1;
 float temperature2;
-float correction_value;
+float avaregeSlope;
+float ratio;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -80,7 +81,7 @@ int main(void) {
 	HAL_Init();
 
 	/* USER CODE BEGIN Init */
-	correction_value = (float) (TS_CAL2_TEMP - TS_CAL1_TEMP) / (*TS_CAL2 - *TS_CAL1 );
+
 	/* USER CODE END Init */
 
 	/* Configure the system clock */
@@ -93,18 +94,20 @@ int main(void) {
 	/* Initialize all configured peripherals */
 	MX_ADC1_Init();
 	/* USER CODE BEGIN 2 */
-	HAL_ADCEx_Calibration_Start(&hadc1, 0);
+	HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
 	/* USER CODE END 2 */
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
+	avaregeSlope = (float) (TS_CAL2_TEMP - TS_CAL1_TEMP) / (TS_CAL2 - TS_CAL1 );
+	ratio = (float) REFERENCE_VOLTAGE/CALIBRATION_REFERENCE_VOLTAGE;
 	while (1) {
 		HAL_ADC_Start(&hadc1);
 		HAL_ADC_PollForConversion(&hadc1, 100);
 
 		raw_data = HAL_ADC_GetValue(&hadc1);
 		temperature1 = __HAL_ADC_CALC_TEMPERATURE(3300, raw_data, ADC_RESOLUTION_12B);
-		temperature2 = (float) (((raw_data * (REFERENCE_VOLTAGE/CALIBRATION_REFERENCE_VOLTAGE) - *TS_CAL1 ) * correction_value) + TS_CAL1_TEMP);
+		temperature2 = (float) (raw_data * ratio - TS_CAL1 ) * avaregeSlope + TS_CAL1_TEMP;
 
 		HAL_ADC_Stop(&hadc1);
 		/* USER CODE END WHILE */
