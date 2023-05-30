@@ -34,3 +34,5 @@ Exercises list
   - Configured ADC1 channel 5 and 6 with 12 bits resolution and polling the samples with 100 miliseconds of sample time.
 - M11A05: Internal Temperature Sensor
   - Configured ADC1 channel 17 in temperature sensor mode with 12 bits resolution.
+- M11A07: ADC Interrupt
+  - Configured ADC1 channel 5 with interruption, 10 bits resolution.
