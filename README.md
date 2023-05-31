@@ -36,3 +36,5 @@ Exercises list
   - Configured ADC1 channel 17 in temperature sensor mode with 12 bits resolution.
 - M11A07: ADC Interrupt
   - Configured ADC1 channel 5 with interruption, 10 bits resolution.
+- M11A09: ADC with DMA
+  - Configured ADC1 channel 5 and 7 with 12 bits resolution using DMA.
