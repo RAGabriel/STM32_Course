@@ -39,4 +39,4 @@ Exercises list
 - M11A09: ADC with DMA
   - Configured ADC1 channel 5 and 7 with 12 bits resolution using DMA.
 - M11A12: ADC with Specific Sampling Rate
-  - Configured ADC1 channel 5 with 250kHz clock, 12 bits resolution, and 10kHz of sampling frequency. 
+  - Configured ADC1 channel 5 with 250kHz clock, 12 bits resolution, and 10kHz of sampling frequency.
